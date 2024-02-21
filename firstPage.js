@@ -5,8 +5,9 @@ const server = http.createServer((req,res) => {             //req = request , re
     //console.log(req.url.toString())
 
     let myurl = './'
+
     if(req.url == '/'){
-        myurl += 'index.html'
+        myurl += '/home.html'
         res.statusCode = 200
     }
     else if(req.url == '/about'){
@@ -14,7 +15,7 @@ const server = http.createServer((req,res) => {             //req = request , re
         res.statusCode = 200
     }
     else{
-        myurl += 'error.html'
+        myurl += '/error.html'
         res.statusCode = 404
     }
 

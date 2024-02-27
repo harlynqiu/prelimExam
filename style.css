@@ -1,0 +1,86 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+header{
+    background-color: rgb(221, 239, 239);
+
+}
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 30px; 
+    min-height: 400px; 
+    margin-right: 60px; 
+    font-size: 15px;
+}
+ul li{
+    display: inline-block;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+    border: 1px solid transparent; 
+    transition: 0.5 ease;
+}
+
+ul li a:hover{
+    background-color: white;
+    color: black;
+}
+
+ul li.active a{
+    background-color: white;
+    color: black;
+}
+
+.main{
+    max-width: 1200px;
+    margin: auto;
+}
+.title{
+    position: absolute;
+    top: 46%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+.title h1{
+    color: white;
+    font-size: 70px;
+}
+
+.below{
+    position: absolute;
+    top: 60%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    text-align-last: center;
+}
+.below p{
+    color: white;
+    font-size: 20px;
+}
+.button{
+    position: absolute;
+    top: 70%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+.btn{
+    border: 1px solid white; 
+    padding: 5px 20px;
+    color: white;
+    transition: 0.5 ease;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+

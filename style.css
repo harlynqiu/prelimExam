@@ -11,7 +11,7 @@ header{
 ul{
     float: right;
     list-style-type: none;
-    margin-top: auto; 
+    margin-top: 50px; 
     min-height: auto; 
     margin-right: auto; 
     font-size: 15px;
@@ -38,6 +38,7 @@ ul li.active a{
 }
 
 .main{
+   
     max-width: 1200px;
     margin: auto;
 }

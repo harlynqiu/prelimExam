@@ -1,0 +1,51 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.title h1{
+    color: white;
+    font-size: 70px;
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(196, 196, 196);
+}
+
+.title{
+    margin-top: 15px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+
+.button{
+    border: none;
+    font-size: 15px;
+    color: white;
+    padding: 8px 16px;
+    background-color: black;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+.btn{
+    border: none; 
+    padding: 5px 20px;
+    color: white;
+    transition: 0.5 ease;
+    font-size: 18px;
+    text-decoration: none;
+}
+

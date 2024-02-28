@@ -11,9 +11,9 @@ header{
 ul{
     float: right;
     list-style-type: none;
-    margin-top: 30px; 
-    min-height: 400px; 
-    margin-right: 60px; 
+    margin-top: auto; 
+    min-height: auto; 
+    margin-right: auto; 
     font-size: 15px;
 }
 ul li{

@@ -5,11 +5,11 @@ const server = http.createServer((req,res) => {             //req = request , re
     //console.log(req.url.toString())
 
     let myurl = './'
-    if(req.url == '/'){
+    if(req.url == './prelimexam-1'){
         myurl += 'index.html'
         res.statusCode = 200
     }
-    else if(req.url == '/about'){
+    else if(req.url == './prelimexam-1/about'){
         myurl += 'about.html'
         res.statusCode = 200
     }
@@ -22,7 +22,7 @@ const server = http.createServer((req,res) => {             //req = request , re
         if(err){
             console.log(err)
         }
-        else{
+        else{   
             res.write(data)
             res.end()
         }

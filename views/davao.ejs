@@ -20,8 +20,38 @@
     <main>
         <center>
             <div>
-                <img class ="flag" src="https://cdn-icons-png.flaticon.com/512/197/197561.png?fbclid=IwAR298VioThrUXEh_WWyu2KvoUvt5sA2staqCzYZUXRkSG6wn9-2ouKzminc_aem_AZwfck2hJxYTEbsxGxObnDASf7JQez8k8Jrv0zBL94Au4rNLizZ-9M1BhH5Di5gGCUfSDCgCWIX23rJCLxCqQbiH"
+                <img class ="flag" src="https://cdn-icons-png.flaticon.com/512/197/197561.png?fbclid=IwAR298VioThrUXEh_WWyu2KvoUvt5sA2staqCzYZUXRkSG6wn9-2ouKzminc_aem_AZwfck2hJxYTEbsxGxObnDASf7JQez8k8Jrv0zBL94Au4rNLizZ-9M1BhH5Di5gGCUfSDCgCWIX23rJCLxCqQbiH">
+                <h4><%= weatherdavao[0].location.name %> </h4>
             </div>
+            <table class = "table table-hover">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Date</th>
+                        <th>Weather</th>
+                        <th>Icon</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-light">
+                        <td scope = "row">Today</td>
+                        <td><%= weatherdavao[1].current.date %></td>
+                        <td><%= weatherdavao[1].current.skytext %></td>
+                        <td><img src="<%= weatherdavao[1].current.imageUrl %>"></td>
+                    </tr>
+                    <tr>
+                        <td scope = "row"><%= weatherdavao[1].forecast[1].day %></td>
+                        <td><%= weatherdavao[1].forecast[1].date %></td>
+                        <td><%= weatherdavao[1].forecast[1].skytextday %></td>
+                    </tr>
+                    <tr>
+                        <td scope = "row"><%= weatherdavao[1].forecast[2].day %></td>
+                        <td><%= weatherdavao[1].forecast[2].date %></td>
+                        <td><%= weatherdavao[1].forecast[2].skytextday %></td>
+                    </tr>
+                </tbody>
+            </table>
         </center>
     </main>
 

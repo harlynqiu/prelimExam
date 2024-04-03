@@ -14,7 +14,7 @@ app.get('/views/davao', function (req, res) {
         if(err) console.log(err);
         else{
             let data = {
-                weatherdavao: JSON.stringify(result, null, 2)
+                weatherdavao: eval(JSON.stringify(result, null, 2))
             }
 
             res.render('davao' , data)

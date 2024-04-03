@@ -1,12 +1,32 @@
-const cryptoRandomString = require ('crypto-random-string')
+//const cryptoRandomString = require ('crypto-random-string')
+//const { students, hello } = require('./mymodule')
+
 const express = require('express')
 const app = express()
-const { students, hello } = require('./mymodule')
 app.set('view engine', 'ejs')
 const port = 8000;
-;
-let randomString = cryptoRandomString({length: 10});
-console.log(randomString)
+
+const weather = require('weather-js')
+
+
+app.get('/views/davao', function (req, res) {
+    weather.find({search: 'Davao, Philippines', degreeType: 'C'}, function(err, result) {
+        if(err) console.log(err);
+        else{
+            let data = {
+                weatherdavao: JSON.stringify(result, null, 2)
+            }
+
+            res.render('davao' , data)
+
+        }
+    });
+})
+
+
+
+//let randomString = cryptoRandomString({length: 10});
+//console.log(randomString)
 
 app.use((req, res, next) => {
     console.log("Request Made")

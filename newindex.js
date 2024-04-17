@@ -6,6 +6,17 @@ const app = express()
 app.set('view engine', 'ejs')
 const port = 8000;
 
+var admin = require("firebase-admin");
+
+var serviceAccount = require("path/to/serviceAccountKey.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+});
+
+const db = admin.firestore()
+const memberColl = db.collection('thefirst')
+
 const weather = require('weather-js')
 
 
@@ -40,10 +51,19 @@ app.use((req, res, next) => {
 
 
 
+app.get('/', async (req, res) => {
 
+    const items = await memberColl.get()
+   // console.log(items.docs.length)
+   let data = {
+    itemData: items.docs,
+    heading: "THE TRIAL",
+    song: "coldplay"
+   }
 
+   res.render('index',data)
 
-app.get('/', function (req, res) {
+    //res.render('index', {heading: "THE TRIAL" , song: "coldplay"});
     res.sendFile('./prelimexam-1/index.html' , { root: __dirname})
 })
 
